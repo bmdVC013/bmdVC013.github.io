@@ -7,7 +7,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-image: url("../background_1920.jpg");
+  background-image: url("../images/background_1920.jpg");
   font-family: 'Oxygen', sans-serif;
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -66,7 +66,7 @@ nav {
 
 @media screen and (max-width: 1280px) {
   body {
-    background-size: url("../background_1280.jpg")
+    background-size: url("../images/background_1280.jpg")
   }
 
   .nav-links {
@@ -77,7 +77,7 @@ nav {
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
-    background-image: url("../background.jpg");
+    background-image: url("../images/background.jpg");
   }
 
   .nav-links {
@@ -152,5 +152,5 @@ nav {
 
 .about div:nth-of-type(2) {
   font-size: calc(1.3vw + 1.5vh);
-  line-height: calc(1.5vw + 1.7vh);
+  line-height: calc(1.7vw + 1.7vh);
 }
