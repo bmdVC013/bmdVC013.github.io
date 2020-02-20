@@ -1,39 +1,25 @@
-// const myHeading = document.querySelector('h1');
-// myHeading.textContent = 'Hello world!';
+const navSlide = () => {
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+  const navLinks = document.querySelectorAll('.nav-links li');
 
-// Adding an image changer
-let myImage = document.querySelector('img');
+  
+  burger.addEventListener('click', () => {
 
-myImage.onclick = function() {
-  let mySrc = myImage.getAttribute('src')
-  if (mySrc = 'images/doge.jpg') {
-    myImage.setAttribute('src', 'images/doge1.jpg');
-  } else {
-    myImage.setAttribute('src', 'images/doge.jpg');
-  }
+    // Toggle Nav
+    nav.classList.toggle('nav-active');
+
+    // Animate Links
+    navLinks.forEach((link, index) => {
+      if (link.style.animation) {
+        link.style.animation = '';
+      } else {
+        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+      }
+    });
+    // Burger Animation
+    burger.classList.toggle('toggle');
+  });
 }
 
-// Adding a personalized welcome message
-let myButton = document.querySelector('button');
-let myHeading = document.querySelector('h1');
-
-function setUserName() {
-  let myName = prompt('Please enter your name.');
-  if (!myName || myName === null) {
-    setUserName();
-  } else {
-  localStorage.setItem('name', myName);
-  myHeading.textContent = 'I am Dung Bui. Hello, ' + myName;
-  }
-}
-
-if (!localStorage.getItem('name')) {
-  setUserName();
-} else {
-  let storedName = localStorage.getItem('name');
-  myHeading.textContent = 'I am Dung Bui. Hello, ' + storedName;
-}
-
-myButton.onclick = function() {
-  setUserName();
-}
+navSlide();
