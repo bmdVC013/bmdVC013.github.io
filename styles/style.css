@@ -155,11 +155,8 @@ nav {
   line-height: calc(1.7vw + 1.7vh);
 }
 
-form {
-  margin-top: 40px;
-}
-
 form button {
+  margin-top: 40px;
   color: #001AFF;
   font-size: calc(1.3vw + 1.5vh);
   background-color: rgba(255,255,255,.1);
@@ -169,7 +166,7 @@ form button {
   border-radius: 10px;
 }
 
-/* button:visited {
+button:visited {
   color: red;
 }
 
@@ -182,4 +179,4 @@ button:focus {
 button:active {
   color: #fff;
   background-color: black;
-} */
+}
