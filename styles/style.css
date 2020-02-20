@@ -154,7 +154,7 @@ nav {
   font-size: calc(1.3vw + 1.3vh);
   line-height: calc(1.7vw + 1.7vh);
 }
-
+/* 
 form {
   margin-top: 40px;
 }
@@ -182,4 +182,4 @@ button:focus {
 button:active {
   color: #fff;
   background-color: black;
-}
+} */
