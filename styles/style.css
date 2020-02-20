@@ -168,6 +168,7 @@ form button {
   padding: 10px;
   border-radius: 10px;
 }
+
 button:visited {
   color: red;
 }
