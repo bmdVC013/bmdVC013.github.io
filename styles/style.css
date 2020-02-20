@@ -134,11 +134,11 @@ nav {
 .about {
   color: #fff;
   margin: 0 auto;
-  padding: 20vh 20vw;
-  
+  padding: 20vh 5vw;
 }
+
 .about div:nth-of-type(1) {
-  font-size: calc(3vw + 1.7vh);
+  font-size: calc(3vw + 1.5vh);
   align-self: center;
   line-height: calc(3vw + 2vh);
   margin-bottom: calc(2.5vw + 1.7vh);;
@@ -151,6 +151,34 @@ nav {
 }
 
 .about div:nth-of-type(2) {
-  font-size: calc(1.3vw + 1.5vh);
+  font-size: calc(1.3vw + 1.3vh);
   line-height: calc(1.7vw + 1.7vh);
+}
+
+form {
+  margin-top: 40px;
+}
+
+form button {
+  color: #001AFF;
+  font-size: calc(1.3vw + 1.5vh);
+  background-color: rgba(255,255,255,.1);
+  border: none;
+  line-height: calc(3vw + 2.7vh);
+  padding: 10px;
+  border-radius: 10px;
+}
+button:visited {
+  color: red;
+}
+
+button:hover,
+button:focus {
+  cursor: pointer;
+  background-color: black;
+}
+
+button:active {
+  color: #fff;
+  background-color: black;
 }
