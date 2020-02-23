@@ -7,15 +7,10 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-image: url("../images/background_1920.jpg");
-  font-family: 'Oxygen', sans-serif;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-color: rbga(0,0,0,.7);
-}
-
-.bg-blur {
-  background-color: rbga(0,0,0,.7);
+  font-family: 'Oxygen', sans-serif;
+  background-image: url("../images/background_1920.png");
 }
 
 nav {
@@ -49,6 +44,19 @@ nav {
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 14px;
+  padding: 20px;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: gray;
+  background-color: black;
+}
+
+.nav-links a:active {
+  color: #fff;
+  background-color: black;
+  text-decoration: underline;
 }
 
 .burger {
@@ -66,7 +74,7 @@ nav {
 
 @media screen and (max-width: 1280px) {
   body {
-    background-size: url("../images/background_1280.jpg")
+    background-image: url("../images/background_1280.png");
   }
 
   .nav-links {
@@ -77,7 +85,7 @@ nav {
 @media screen and (max-width: 768px) {
   body {
     overflow-x: hidden;
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/background.png");
   }
 
   .nav-links {
@@ -154,15 +162,13 @@ nav {
   font-size: calc(1.3vw + 1.3vh);
   line-height: calc(1.7vw + 1.7vh);
 }
-/* 
-form {
-  margin-top: 40px;
-}
+
 
 form button {
-  color: #001AFF;
+  margin-top: 40px;
+  color: blue;
   font-size: calc(1.3vw + 1.5vh);
-  background-color: rgba(255,255,255,.1);
+  background-color: rgba(255,255,255,.2);
   border: none;
   line-height: calc(3vw + 2.7vh);
   padding: 10px;
@@ -182,4 +188,4 @@ button:focus {
 button:active {
   color: #fff;
   background-color: black;
-} */
+}
