@@ -162,11 +162,18 @@ nav {
   font-size: calc(1.3vw + 1.3vh);
   line-height: calc(1.7vw + 1.7vh);
 }
+<<<<<<< HEAD
 
 
 form button {
   margin-top: 40px;
   color: blue;
+=======
+
+form button {
+  margin-top: 40px;
+  color: #001AFF;
+>>>>>>> 285d81fcdecdfaba28a8a5288bfae78ac3bedc33
   font-size: calc(1.3vw + 1.5vh);
   background-color: rgba(255,255,255,.2);
   border: none;
@@ -188,4 +195,8 @@ button:focus {
 button:active {
   color: #fff;
   background-color: black;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 285d81fcdecdfaba28a8a5288bfae78ac3bedc33
