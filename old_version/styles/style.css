@@ -21,11 +21,12 @@ nav {
   background-color: rgba(43,41,41,0.7);
 }
 
-.logo {
-  color: #001AFF;
+.logo a {
   letter-spacing: 5px;
   font-size: 2rem;
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Comfortaa', cursive; 
+  color: #001AFF;
+  text-decoration: none;
 }
 
 .nav-links {
