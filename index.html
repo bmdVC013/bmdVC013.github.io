@@ -3,94 +3,190 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dung Bui</title>
-  <link rel="icon" sizes="32x32" href="favicon.png">
-  <meta name="description" content="The personal website of Dung Bui">
-  <style>
-    @font-face {
-      font-family: "Mr De Haviland";
-      font-size: normal;
-      font-weight: 400;
-      src: url("./mrdehaviland-regular-subset-webfont.woff2");
-    }
-
-    body {
-      margin: 16px;
-      text-align: center;
-    }
-
-    h1 {
-      font-family: "Mr De Haviland", cursive;
-      text-shadow: 1px 1px 2px #000;
-      font-size: 28pt;
-      font-size: calc(16px + 10vw);
-      font-weight: normal;
-      margin-top: 0.5em;
-      margin-bottom: 0.1em;
-    }
-
-    p {
-      color: #111;
-      font-family: Georgia, Times, "Times New Roman", serif;
-      font-size: 13pt;
-      font-size: calc(12px + 1vw);;
-    }
-    p a {
-      color: #111;
-    }
-
-    .links {
-      margin: 0;
-      padding: 0;
-    }
-
-    .links li {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: inline-block;
-    }
-
-    .links img {
-      width: 32px;
-      width: calc(32px + 2vw);
-      height: 32px;
-      height: calc(32px + 2vw);
-    }
-
-    .footer {
-      margin-top: 2em;
-      font-size: 12px;
-      font-size: calc(12px + 0.3vw);
-    }
-  </style>
+  <title>DB</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
 </head>
 <body>
-  <h1>Dung Bui</h1>
+  <div class="container">
+    <div class="nav">
+      <div class="nav-header">
+        <a href="#" class="logo" target="_blank">
+          <img src="logo.png" alt="">
+          <h3>Dasboard</h3>
+        </a>
+      </div>
+      <ul class="nav-item">
+        <li><a href="#" class="logo item" target="_blank"><i class="fa fa-home" style="color: #ff8080"></i>Home</a></li>
+        <li><a href="#" class="logo item" target="_blank"><i class="fas fa-th-large" style="color: #ffc080"></i>Dasboard</a></li>
+        <li>
+          <a href="#" class="logo item" target="_blank"><i class="fas fa-chart-bar" style="color: #83ff65"></i>Assessment</a>
+          <div class="circle-num">12</div>
+        </li>
+        <li>
+          <a href="#" class="logo item" target="_blank"><i class="fa fa-inbox" style="color: #4affc1"></i>Inbox</a>
+          <div class="circle-num">01</div>
+        </li>
+        <li><a href="#" class="logo item" target="_blank"><i class="fa fa-users" style="color: #404dff"></i>Users</a></li>
+        <li><a href="#" class="logo item" target="_blank"><i class="fa fa-user" style="color: #b73aff"></i>Profile</a></li>
+      </ul>
+      <ul class="nav-setting">
+        <li><a href="#" class="logo setting" target="_blank"><i class="fa fa-cog"></i>Settings</a></li>
+        <li><a href="#" class="logo setting" target="_blank"><i class="fa fa-question-circle"></i>Help</a></li>
+        <li><a href="#" class="logo setting" target="_blank"><i class="fa fa-comment"></i>Feedback</a></li>
+      </ul>
+    </div>
+    
+    <div class="content">
+      <div class="user-bar">
+        <div class="avatar">
+          <img src="td.jpeg" alt="">
+            <p>Tiger Tran</p>
+            <p><i class="fas fa-map-marker-alt"></i>The White House, USA</p>
+            <p><i class="fas fa-ellipsis-v"></i></p>
+        </div>
+        <div class="search">
+          <input type="text" placeholder="Search">
+          <a href="#"><i class="fas fa-search"></i></a>
+        </div>
+        <div class="icon">
+          <a href="#"><i class="fas fa-bell"></i></a>
+        </div>
+      </div>
 
-  <ul class="links">
-    <li>
-      <a href="https://www.facebook.com/bmdVC013" title="Dung Bui on Facebook">
-        <img src="facebook.svg">
-      </a>
-    </li>
-    <li>
-      <a href="https://www.github.com/bmdVC013" title="Dung Bui on Github">
-        <img src="github.svg">
-      </a>
-    </li>
-    <li>
-      <a href="https://www.linkedin.com/in/bmdVC013/" title="Dung Bui on Linkedin">
-        <img src="linkedin.svg">
-      </a>
-    </li>
-  </ul>
-  <p>I am 23 years old man from Vietnam<br>I am passionate about everything related to web development and AI.</p>
+      <div class="top">
+        <div class="box graph">
+          <div class="header">
+            <p>Overall Stats</p>
+            <div class="select-sec">
+              <select id="month">
+                <option value="mon" selected>Month</option>
+                <option value="jan">January</option>
+                <option value="feb">February</option>
+                <option value="mar">March</option>
+              </select>
+              <div class="arrow-down"></div>
+            </div>
+          </div>
+          <!-- <img src="graph.png" alt=""> -->
+        </div>
 
-  <p>I read and write Python, JavaScript, HTML, CSS, and SQL<br>I interested in Algorithms, Data Structures, and Optimal.</p>
+        <div class="box social-media-traffic">
+          <div class="header">
+            <p>Social Media Traffic</p>
+            <div class="select-sec">
+              <select id="month">
+                <option value="mon" selected>Month</option>
+                <option value="jan">January</option>
+                <option value="feb">February</option>
+                <option value="mar">March</option>
+              </select>
+              <div class="arrow-down"></div>
+            </div>
+          </div>
+          <div class="bar-stats">
+            <div class="mon-sec">
+              <p>January</p>
+              <div class="mon-bar">
+                <span><i class="line1"></i>Facebook</span>
+                <span><i class="line2"></i>Twitter</span>
+                <span><i class="line3"></i>Linkedin</span>
+              </div>
+            </div>
+            <div class="mon-sec">
+              <p>February</p>
+              <div class="mon-bar">
+                <span><i class="line4"></i>Facebook</span>
+                <span><i class="line5"></i>Twitter</span>
+                <span><i class="line6"></i>Linkedin</span>
+              </div>
+            </div>
+            <div class="mon-sec">
+              <p>March</p>
+              <div class="mon-bar">
+                <span><i class="line7"></i>Facebook</span>
+                <span><i class="line8"></i>Twitter</span>
+                <span><i class="line9"></i>Linkedin</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  <p>Please <a href="mailto:bmdVC013@gmail.com">contact me</a> if you want to work with me.</p>
-
-  <p class="footer">This page is inspired by <a href="https://poeschko.com/">Jan P&ouml;schko</a></p>
+      <div class="bottom">
+        <div class="box user-stats">
+          <div class="header">
+            <p>User Stats</p>
+            <div class="select-sec">
+              <select id="month">
+                <option value="mon" selected>Month</option>
+                <option value="jan">January</option>
+                <option value="feb">February</option>
+                <option value="mar">March</option>
+              </select>
+              <div class="arrow-down"></div>
+            </div>
+          </div>
+          <div class="table-user">
+            <div>
+              <span>Name</span>
+              <span>Date</span>
+              <span>Type</span>
+              <span>Status</span>
+              <span>Option</span>
+            </div>
+            <div>
+              <span><img src="td.jpeg" alt="">Tom Cruise</span>
+              <span>September 2 1945</span>
+              <span><b class="pre pur">Premium</b></span>
+              <span class="open">Open</span>
+              <span><i class="toggle"></i></span>
+            </div>
+            <div>
+              <span><img src="td.jpeg" alt="">Leonardo Dicaprio</span>
+              <span>May 7 1954</span>
+              <span><b class="pre org">Premium</b></span>
+              <span class="closed">Closed</span>
+              <span><i class="toggle"></i></span>
+            </div>
+            <div>
+              <span><img src="td.jpeg" alt="">Brad Pitt</span>
+              <span>December 30 1972</span>
+              <span><b class="pre org">Premium</b></span>
+              <span class="open">Open</span>
+              <span></a><i class="toggle off"></i></span>
+            </div>
+            <div>
+              <span><img src="td.jpeg" alt="">Johnny Depp</span>
+              <span>May 2 1975</span>
+              <span><b class="pre pur">Premium</b></span>
+              <span class="open">Open</span>
+              <span><i class="toggle"></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="revenue">
+          <div class="box">
+            <span>Revenue</span>
+            <span class="money">$250,000</span>
+            <span class="mo">July</span>
+            <p>20<span>%</span></p>
+          </div>
+          <div class="box">
+            <span>Revenue</span>
+            <span class="money">$102,000</span>
+            <span class="mo">August</span>
+            <p>17<span>%</span></p>
+          </div>
+          <div class="box">
+            <span>Revenue</span>
+            <span class="money">$350,000</span>
+            <span class="mo">September</span>
+            <p>24<span>%</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
