@@ -1,579 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="keywords" content="dootstrap v1" />
-  <meta name="description" content="Rebuild bootstrap library" />
-  <meta name="author" content="DungBM (bmdVC013)" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="icon" href="images/i-logo.png" type="image/png">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css">
-  <title>Layout | Dootstrap | DungBM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dung Bui</title>
+  <link rel="icon" sizes="32x32" href="favicon.png">
+  <meta name="description" content="The personal website of Dung Bui">
+  <style>
+    @font-face {
+      font-family: "Mr De Haviland";
+      font-size: normal;
+      font-weight: 400;
+      src: url("./mrdehaviland-regular-subset-webfont.woff2");
+    }
+
+    body {
+      margin: 16px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: "Mr De Haviland", cursive;
+      text-shadow: 1px 1px 2px #000;
+      font-size: 28pt;
+      font-size: calc(16px + 10vw);
+      font-weight: normal;
+      margin-top: 0.5em;
+      margin-bottom: 0.1em;
+    }
+
+    p {
+      color: #111;
+      font-family: Georgia, Times, "Times New Roman", serif;
+      font-size: 13pt;
+      font-size: calc(12px + 1vw);;
+    }
+    p a {
+      color: #111;
+    }
+
+    .links {
+      margin: 0;
+      padding: 0;
+    }
+
+    .links li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+
+    .links img {
+      width: 32px;
+      width: calc(32px + 2vw);
+      height: 32px;
+      height: calc(32px + 2vw);
+    }
+
+    .footer {
+      margin-top: 2em;
+      font-size: 12px;
+      font-size: calc(12px + 0.3vw);
+    }
+  </style>
 </head>
-
 <body>
-  <header class="c-navbar c-navbar__expand c-navbar--dark flex-column flex-md-row bd-navbar">
-    <!-- Dootstrap logo -->
-    <a class="c-navbar__brand mr-0 mr-md-2 d-flex" href="#" aria-label="Bootstrap">
-      <!-- <svg class="d-block" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 612 612" role="img" focusable="false">
-    <title>Dootstrap</title>
-    <path class="border" fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"></path>
-    <path class="B" fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"></path>
-  </svg> -->
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36" width="38" height="38">
-        <defs>
-          <path d="M30 0.47C33.05 0.48 35.52 2.95 35.53 6C35.53 8.4 35.53 27.6 35.53 30C35.52 33.05 33.05 35.52 30 35.53C27.6 35.53 8.4 35.53 6 35.53C2.95 35.52 0.48 33.05 0.47 30C0.47 27.6 0.47 8.4 0.47 6C0.48 2.95 2.95 0.48 6 0.47C7.6 0.47 15.6 0.47 30 0.47M6 0C2.7 0 0 2.7 0 6C0 8.4 0 27.6 0 30C0 33.3 2.7 36 6 36C8.4 36 27.6 36 30 36C33.3 36 36 33.3 36 30C36 27.6 36 8.4 36 6C36 2.7 33.3 0 30 0C25.2 0 8.4 0 6 0Z" id="c6uTRap9s"></path>
-          <path d="M9.96 7.5L20.18 7.5C20.18 7.5 20.18 7.5 20.18 7.5C25.21 7.5 29.29 11.58 29.29 16.62C29.29 19 29.29 17.19 29.29 19.61C29.29 24.52 25.32 28.5 20.41 28.5C19.01 28.5 15.53 28.5 9.96 28.5L9.96 7.5Z" id="a5u2VVo24">
-          </path>
-          <path d="M13.59 10.96C17.32 10.96 19.65 10.96 20.59 10.96C23.39 10.96 25.67 13.23 25.67 16.04C25.67 17.74 25.67 17.71 25.67 19.4C25.67 22.24 23.37 24.54 20.53 24.54C19.6 24.54 17.29 24.54 13.59 24.54L13.59 10.96Z" id="a2LOqZ1CgY"></path>
-        </defs>
-        <g>
-          <g>
-            <g>
-              <use xlink:href="#c6uTRap9s" opacity="1" fill="#fff" fill-opacity="1"></use>
-              <g>
-                <use xlink:href="#c6uTRap9s" opacity="1" fill-opacity="0" stroke="#000000" stroke-width="1" stroke-opacity="0"></use>
-              </g>
-            </g>
-            <g>
-              <use xlink:href="#a5u2VVo24" opacity="1" fill="#fff" fill-opacity="1"></use>
-            </g>
-            <g>
-              <use xlink:href="#a2LOqZ1CgY" opacity="1" fill="#3F51B5" fill-opacity="1"></use>
-            </g>
-          </g>
-        </g>
-      </svg>
-    </a>
+  <h1>Dung Bui</h1>
 
-    <!-- Navigation bar scrollable (<768px) -->
-    <div class="c-navbar__nav--scroll">
-      <ul class="c-navbar__nav flex-row">
-        <li class="c-nav__item">
-          <a class="c-nav-link" href="#">Home</a>
-        </li>
-        <li class="c-nav__item">
-          <a class="c-nav-link active" href="#">Documentation</a>
-        </li>
-        <li class="c-nav__item">
-          <a class="c-nav-link" href="#">Examples</a>
-        </li>
-        <li class="c-nav__item">
-          <a class="c-nav-link" href="#">Icons</a>
-        </li>
-        <li class="c-nav__item">
-          <a class="c-nav-link" href="#">Themes</a>
-        </li>
-        <li class="c-nav__item">
-          <a class="c-nav-link" href="#">Expo</a>
-        </li>
-        <li class="c-nav__item">
-          <a class="c-nav-link" href="#">Blog</a>
-        </li>
-      </ul>
-    </div>
+  <ul class="links">
+    <li>
+      <a href="https://www.facebook.com/bmdVC013" title="Dung Bui on Facebook">
+        <img src="facebook.svg">
+      </a>
+    </li>
+    <li>
+      <a href="https://www.github.com/bmdVC013" title="Dung Bui on Github">
+        <img src="github.svg">
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/bmdVC013/" title="Dung Bui on Linkedin">
+        <img src="linkedin.svg">
+      </a>
+    </li>
+  </ul>
+  <p>I am 23 years old man from Vietnam<br>I am passionate about everything related to web development and AI.</p>
 
-    <!-- Navigation version + connect link -->
-    <ul class="c-navbar__nav ml-md-auto">
-      <li class="c-nav__item c-dropdown">
-        <!-- Version options -->
-        <a id="bd-versions" class="c-nav__item c-nav-link c-dropdown__toggle" href="javascript:undefined" rel="noopener" data-toggle="dropdown" aria-label="dropdown" aria-haspopup="true" aria-expanded="false">
-          v1.0.0
-        </a>
-        <div class="c-dropdown__menu c-dropdown__menu-md--right" aria-labelledby="bd-versions">
-          <a href="#" class="c-dropdown__item active">Latest (1.0.x)</a>
-          <div class="c-dropdown__divider"></div>
-          <a href="#" data-value="v0.0.0" class="c-dropdown__item">v0.0.0</a>
-          <a href="#" data-value="v0.0.0" class="c-dropdown__item">v0.0.0</a>
+  <p>I read and write Python, JavaScript, HTML, CSS, and SQL<br>I interested in Algorithms, Data Structures, and Optimal.</p>
 
-          <div class="c-dropdown__divider"></div>
-          <a href="#" class="c-dropdown__item">All versions</a>
-        </div>
-      </li>
-      <li class="c-nav__item pl-2">
-        <!-- Githublogo -->
-        <a href="#" class="c-nav-link px-1 mx-1" target="_blank" rel="noopener" aria-label="Github">
-          <svg xmlns="http://www.w3.org/2000/svg" class="c-navbar__nav--svg" viewBox="0 0 512 499.36" role="img" focusable="false">
-            <title>GitHub</title>
-            <path fill="currentColor" fill-rule="evenodd" d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z"></path>
-          </svg>
-        </a>
-      </li>
-      <li class="c-nav__item">
-        <!-- Twitter logo -->
-        <a href="#" class="c-nav-link px-1 mx-1" target="_blank" rel="noopener" aria-label="twitter">
-          <svg xmlns="http://www.w3.org/2000/svg" class="c-navbar__nav--svg" viewBox="0 0 512 416.32" role="img" focusable="false">
-            <title>Twitter</title>
-            <path fill="currentColor" d="M160.83 416.32c193.2 0 298.92-160.22 298.92-298.92 0-4.51 0-9-.2-13.52A214 214 0 0 0 512 49.38a212.93 212.93 0 0 1-60.44 16.6 105.7 105.7 0 0 0 46.3-58.19 209 209 0 0 1-66.79 25.37 105.09 105.09 0 0 0-181.73 71.91 116.12 116.12 0 0 0 2.66 24c-87.28-4.3-164.73-46.3-216.56-109.82A105.48 105.48 0 0 0 68 159.6a106.27 106.27 0 0 1-47.53-13.11v1.43a105.28 105.28 0 0 0 84.21 103.06 105.67 105.67 0 0 1-47.33 1.84 105.06 105.06 0 0 0 98.14 72.94A210.72 210.72 0 0 1 25 370.84a202.17 202.17 0 0 1-25-1.43 298.85 298.85 0 0 0 160.83 46.92"></path>
-          </svg>
-        </a>
-      </li>
-      <li class="c-nav__item">
-        <!-- Slack logo -->
-        <a href="#" class="c-nav-link px-1 mx-1" target="_blank" rel="noopener" aria-label="slack">
-          <svg xmlns="http://www.w3.org/2000/svg" class="c-navbar__nav--svg" viewBox="0 0 512 512" role="img" focusable="false">
-            <title>Slack</title>
-            <path fill="currentColor" d="M210.787 234.832l68.31-22.883 22.1 65.977-68.309 22.882z"></path>
-            <path fill="currentColor" d="M490.54 185.6C437.7 9.59 361.6-31.34 185.6 21.46S-31.3 150.4 21.46 326.4 150.4 543.3 326.4 490.54 543.34 361.6 490.54 185.6zM401.7 299.8l-33.15 11.05 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.38-68.36 22.92 11.46 34.38c4.5 13.92-2.87 29.06-16.78 33.56-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18l-11.46-34.43-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.5-13.92 2.87-29.06 16.78-33.56l33.12-11.03-22.1-65.9-33.15 11.05c-2.87.82-6.14 1.64-9 1.23a27.32 27.32 0 0 1-24.56-18c-4.48-13.93 2.89-29.07 16.81-33.58l33.15-11.05-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.46 34.38 68.36-22.92-11.46-34.38c-4.5-13.92 2.87-29.06 16.78-33.56s29.06 2.87 33.56 16.78l11.47 34.42 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.87 29.06-16.78 33.56L329.7 194.6l22.1 65.9 33.15-11.05c13.92-4.5 29.06 2.87 33.56 16.78s-2.88 29.07-16.81 33.57z"></path>
-          </svg>
-        </a>
-      </li>
-      <li class="c-nav__item">
-        <!-- Open collective logo -->
-        <a href="#" class="c-nav-link px-1 mx-1" target="_blank" rel="noopener" aria-label="open collective">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" fill-rule="evenodd" class="c-navbar__nav--svg" viewBox="0 0 40 41" role="img" focusable="false">
-            <title>Open Collective</title>
-            <path fill-opacity=".4" d="M32.8 21c0 2.4-.8 4.9-2 6.9l5.1 5.1c2.5-3.4 4.1-7.6 4.1-12 0-4.6-1.6-8.8-4-12.2L30.7 14c1.2 2 2 4.3 2 7z"></path>
-            <path d="M20 33.7a12.8 12.8 0 0 1 0-25.6c2.6 0 5 .7 7 2.1L32 5a20 20 0 1 0 .1 31.9l-5-5.2a13 13 0 0 1-7 2z"></path>
-          </svg>
-        </a>
-      </li>
-    </ul>
+  <p>Please <a href="mailto:bmdVC013@gmail.com">contact me</a> if you want to work with me.</p>
 
-    <!-- Download Button -->
-    <a class="c-btn bd-btn-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="#">Download</a>
-  </header>
-
-
-
-  <div class="o-container-fluid">
-    <div class="row">
-      <!-- Sidebar: Search + Navigation -->
-      <div class="bd-sidebar col-md-3 col-xl-2">
-        <form class="bd-search d-flex align-items-center" role="search">
-          <span class="bd-algolia-autocomplete">
-            <input class="c-form-control bd-input" type="text" placeholder="Search...">
-          </span>
-          <button class="c-btn p-0 pb-n3 ml-3 d-flex d-md-none" type="button" data-toggle="collapse" data-target="#bd-sidebar-nav" aria-expanded="false" aria-label="Toggle docs navigation">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false">
-              <title>Menu</title>
-              <path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path>
-            </svg>
-          </button>
-        </form>
-
-        <nav id="bd-sidebar-nav" class="bd-links d-md-block" aria-label="Main navigation">
-          <div class="bd-toc-item">
-            <a class="bd-toc-link" href="/">
-              Layout
-            </a>
-
-            <ul class="nav bd-sidenav">
-              <li class="">
-                <a href="/">
-                  Overview
-                </a>
-              </li>
-              <li>
-                <a href="/layout-grid.html">
-                  Grid
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="bd-toc-item">
-            <a class="bd-toc-link" href="/components-overview.html">
-              Components
-            </a>
-
-            <ul class="nav bd-sidenav">
-              <li>
-                <a href="/components-overview.html">
-                  Overview
-                </a>
-              </li>
-              <li>
-                <a href="/components-buttons.html">
-                  Buttons
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-      </div>
-
-      <!-- Main contents -->
-      <main class="bd-content col-md-9 col-xl-8 py-md-3 pl-md-5">
-        <!-- Heading -->
-        <h1 id="layout" class="">
-          <p class="bd-title">
-            Layout
-          </p>
-        </h1>
-        <p class="bd-lead">Components and options for laying out your Dootstrap project, including wrapping containers, a powerful grid system, a flexible media object, and responsive utility classes.</p>
-
-        <!-- Containers -->
-        <h2 id="containers">
-          <p class="bd-content__title">
-            Containers
-            <a class="bd-anchorjs-link" href="#containers" aria-label="Anchor">#</a>
-          </p>
-        </h2>
-
-        <p>Dootstrap comes with three different containers:</p>
-        <ul class="bd-list-code">
-          <li>
-            <code class="highlighter-rouge">.container</code>, which sets a <code class="highlighter-rouge">max-width</code> at each responsive breakpoint</li>
-          <li>
-            <code class="highlighter-rouge">.container-fluid</code>, which is <code class="highlighter-rouge">width: 100%</code> at all breakpoints
-          </li>
-          <li>
-            <code class="highlighter-rouge">.container-{breakpoint}</code>, which is <code class="highlighter-rouge">width: 100%</code> until the specified breakpoint
-          </li>
-        </ul>
-
-        <p>
-          The table below illustrates how each container’s <code class="highlighter-rouge">max-width</code> compares to the original <code class="highlighter-rouge">.container</code> and <code class="highlighter-rouge">.container-fluid</code> across each breakpoint.
-        </p>
-
-        <table class="c-table c-table--bordered c-table--stripped text-left">
-          <thead>
-            <tr>
-              <th></th>
-              <th>
-                Extra small<br>
-                <span class="font-weight-normal">&lt;576px</span>
-              </th>
-              <th>
-                Small<br>
-                <span class="font-weight-normal">≥576px</span>
-              </th>
-              <th>
-                Medium<br>
-                <span class="font-weight-normal">≥768px</span>
-              </th>
-              <th>
-                Large<br>
-                <span class="font-weight-normal">≥992px</span>
-              </th>
-              <th>
-                Extra large<br>
-                <span class="font-weight-normal">≥1200px</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code class="highlighter-rouge">.container</code></td>
-              <td class="text-muted">100%</td>
-              <td>540px</td>
-              <td>720px</td>
-              <td>960px</td>
-              <td>1140px</td>
-            </tr>
-            <tr>
-              <td><code class="highlighter-rouge">.container-sm</code></td>
-              <td class="text-muted">100%</td>
-              <td>540px</td>
-              <td>720px</td>
-              <td>960px</td>
-              <td>1140px</td>
-            </tr>
-            <tr>
-              <td><code class="highlighter-rouge">.container-md</code></td>
-              <td class="text-muted">100%</td>
-              <td class="text-muted">100%</td>
-              <td>720px</td>
-              <td>960px</td>
-              <td>1140px</td>
-            </tr>
-            <tr>
-              <td><code class="highlighter-rouge">.container-lg</code></td>
-              <td class="text-muted">100%</td>
-              <td class="text-muted">100%</td>
-              <td class="text-muted">100%</td>
-              <td>960px</td>
-              <td>1140px</td>
-            </tr>
-            <tr>
-              <td><code class="highlighter-rouge">.container-xl</code></td>
-              <td class="text-muted">100%</td>
-              <td class="text-muted">100%</td>
-              <td class="text-muted">100%</td>
-              <td class="text-muted">100%</td>
-              <td>1140px</td>
-            </tr>
-            <tr>
-              <td><code class="highlighter-rouge">.container-fluid</code></td>
-              <td class="text-muted">100%</td>
-              <td class="text-muted">100%</td>
-              <td class="text-muted">100%</td>
-              <td class="text-muted">100%</td>
-              <td class="text-muted">100%</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- All in one -->
-        <h3 id="all-in-one" class="">
-          <p class="bd-content__title">
-            All-in-one
-            <a class="bd-anchorjs-link" href="#all-in-one" aria-label="Anchor">#</a>
-          </p>
-        </h3>
-        <p>
-          Our default <code class="highlighter-rouge">.container</code> class is a responsive, fixed-width container, meaning its <code class="highlighter-rouge">max-width</code> changes at each breakpoint.
-        </p>
-        <div class="bd-clipboard mt-2">
-          <button class="bd-btn-clipboard" type="button" title="Copy to clipboard">Copy</button>
-        </div>
-
-        <figure class="bd-highlight">
-          <pre>
-    <code class="language-markup" data-lang="html">&lt;div class="container"&gt;
-  &lt;!-- Content here --&gt;
-&lt;/div&gt;</code> 
-  </pre>
-        </figure>
-        <!-- End All in one -->
-
-        <!-- Fluid -->
-        <h3 id="fluid" class="">
-          <p class="bd-content__title">
-            Fluid
-            <a class="bd-anchorjs-link" href="#fluid" aria-label="Anchor">#</a>
-          </p>
-        </h3>
-        <p>Use <code class="highlighter-rouge">.container-fluid</code> for a full width container, spanning the entire width of the viewport.</p>
-        <div class="bd-clipboard mt-2">
-          <button class="bd-btn-clipboard" type="button" title="Copy to clipboard">Copy</button>
-        </div>
-        <figure class="bd-highlight">
-          <pre>
-    <code class="language-markup" data-lang="html">&lt;div class="container-fluid"&gt;
-  ...
-&lt;/div&gt;</code> 
-  </pre>
-        </figure>
-        <!-- End Fluid -->
-
-        <!-- Responsive -->
-        <h3 id="responsive" class="">
-          <p class="bd-content__title">
-            Responsive
-            <a class="bd-anchorjs-link" href="#responsive" aria-label="Anchor">#</a>
-          </p>
-        </h3>
-        <p>
-          Responsive containers are new in Dootstrap. They allow you to specify a class that is 100% wide until the specified breakpoint is reached, after which we apply <code class="highlighter-rouge">max-width</code>s for each of the higher breakpoints. For example, <code class="highlighter-rouge">.container-sm</code> is 100% wide to start until the <code class="highlighter-rouge">sm</code> breakpoint is reached, where it will scale up with <code class="highlighter-rouge">md</code>, <code class="highlighter-rouge">lg</code>, and <code class="highlighter-rouge">xl</code>.
-        </p>
-        <div class="bd-clipboard mt-2">
-          <button class="bd-btn-clipboard" type="button" title="Copy to clipboard">Copy</button>
-        </div>
-        <figure class="bd-highlight">
-          <pre>
-    <code class="language-markup" data-lang="html">&lt;div class="container-sm"&gt;100% wide until small breakpoint&lt;/div&gt;
-&lt;div class="container-md"&gt;100% wide until medium breakpoint&lt;/div&gt;
-&lt;div class="container-lg"&gt;100% wide until large breakpoint&lt;/div&gt;
-&lt;div class="container-xl"&gt;100% wide until extra large breakpoint&lt;/div&gt;
-</code> 
-  </pre>
-        </figure>
-        <!-- END Responsive -->
-
-        <!-- Responsive breakpoints -->
-        <h2 id="responsive-bps">
-          <p class="bd-content__title">
-            Responsive breakpoints
-            <a class="bd-anchorjs-link" href="#responsive-bps" aria-label="Anchor">#</a>
-          </p>
-        </h2>
-
-        <p>Dootstrap primarily uses the following media query ranges—or breakpoints—in our source Sass files for our layout, grid system, and components.</p>
-        <div class="bd-clipboard mt-2">
-          <button class="bd-btn-clipboard" type="button" title="Copy to clipboard">Copy</button>
-        </div>
-        <figure class="bd-highlight">
-          <pre>
-    <code class="language-css" data-lang="css">// Extra small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Dootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }</code> 
-  </pre>
-        </figure>
-
-        <p>Since we write our source CSS in Sass, all our media queries are available via Sass mixins:</p>
-        <div class="bd-clipboard mt-2">
-          <button class="bd-btn-clipboard" type="button" title="Copy to clipboard">Copy</button>
-        </div>
-        <figure class="bd-highlight">
-          <pre>
-    <code class="language-css" data-lang="css">// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
-@include media-breakpoint-up(sm) { ... }
-@include media-breakpoint-up(md) { ... }
-@include media-breakpoint-up(lg) { ... }
-@include media-breakpoint-up(xl) { ... }
-
-// Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint
-.custom-class {
-  display: none;
-}
-@include media-breakpoint-up(sm) {
-  .custom-class {
-    display: block;
-  }
-}</code> 
-  </pre>
-        </figure>
-
-        <p>We occasionally use media queries that go in the other direction (the given screen size or smaller):</p>
-        <div class="bd-clipboard mt-2">
-          <button class="bd-btn-clipboard" type="button" title="Copy to clipboard">Copy</button>
-        </div>
-        <figure class="bd-highlight">
-          <pre>
-    <code class="language-css" data-lang="css">// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) { ... }
-
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) { ... }
-
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) { ... }
-
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) { ... }
-
-// Extra large devices (large desktops)
-// No media query since the extra-large breakpoint has no upper bound on its width</code> 
-  </pre>
-        </figure>
-
-        <p>Once again, these media queries are also available via Sass mixins:</p>
-        <div class="bd-clipboard mt-2">
-          <button class="bd-btn-clipboard" type="button" title="Copy to clipboard">Copy</button>
-        </div>
-        <figure class="bd-highlight">
-          <pre>
-    <code class="language-css" data-lang="css">@include media-breakpoint-down(xs) { ... }
-@include media-breakpoint-down(sm) { ... }
-@include media-breakpoint-down(md) { ... }
-@include media-breakpoint-down(lg) { ... }
-// No media query necessary for xl breakpoint as it has no upper bound on its width
-
-// Example: Style from medium breakpoint and down
-@include media-breakpoint-down(md) {
-  .custom-class {
-    display: block;
-  }
-}</code> 
-  </pre>
-        </figure>
-
-        <p>There are also media queries and mixins for targeting a single segment of screen sizes using the minimum and maximum breakpoint widths.</p>
-        <div class="bd-clipboard mt-2">
-          <button class="bd-btn-clipboard" type="button" title="Copy to clipboard">Copy</button>
-        </div>
-        <figure class="bd-highlight">
-          <pre>
-    <code class="language-css" data-lang="css">// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) { ... }
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767.98px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991.98px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199.98px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }</code> 
-  </pre>
-        </figure>
-
-        <p>Similarly, media queries may span multiple breakpoint widths:</p>
-        <div class="bd-clipboard mt-2">
-          <button class="bd-btn-clipboard" type="button" title="Copy to clipboard">Copy</button>
-        </div>
-        <figure class="bd-highlight">
-          <pre>
-    <code class="language-css" data-lang="css">@include media-breakpoint-only(xs) { ... }
-@include media-breakpoint-only(sm) { ... }
-@include media-breakpoint-only(md) { ... }
-@include media-breakpoint-only(lg) { ... }
-@include media-breakpoint-only(xl) { ... }
-@include media-breakpoint-only(xl) { ... }</code> 
-  </pre>
-        </figure>
-        <!-- END Responsive breakpoints -->
-
-        <!-- Z-index -->
-        <h2 id="z-index">
-          <p class="bd-content__title">
-            Z-index
-            <a class="bd-anchorjs-link" href="#z-index" aria-label="Anchor">#</a>
-          </p>
-        </h2>
-
-        <p>We don’t encourage customization of these individual values; should you change one, you likely need to change them all.</p>
-
-        <figure class="bd-highlight">
-          <pre>
-    <code class="language-css" data-lang="css">$zindex-dropdown:          1000 !default;
-$zindex-sticky:            1020 !default;
-$zindex-fixed:             1030 !default;
-$zindex-modal-backdrop:    1040 !default;
-$zindex-modal:             1050 !default;
-$zindex-popover:           1060 !default;
-$zindex-tooltip:           1070 !default;</code> 
-  </pre>
-        </figure>
-
-        <p>To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit <code class="highlighter-rouge">z-index</code> values of <code class="highlighter-rouge">1</code>, <code class="highlighter-rouge">2</code>, and <code class="highlighter-rouge">3</code> for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher <code class="highlighter-rouge">z-index</code> value to show their border over the sibling elements.</p>
-        <!-- END Z-index -->
-        <!-- End Containers -->
-
-      </main>
-
-      <!-- Table of contents -->
-      <nav class="d-none d-xl-block col-xl-2 bd-toc">
-        <ul class="bd-toc__section-nav">
-          <li class="bd-toc__entry">
-            <a href="#containers">Containers</a>
-            <ul class="">
-              <li class="">
-                <a href="#all-in-one">All-in-one</a>
-              </li>
-              <li class="">
-                <a href="#fluid">Fluid</a>
-              </li>
-              <li class="">
-                <a href="#responsive">Responsive</a>
-              </li>
-            </ul>
-          </li>
-          <li class="bd-toc__entry">
-            <a href="#responsive-bps">Responsive breakpoints</a>
-          </li>
-          <li class="bd-toc__entry">
-            <a href="#z-index">Z-index</a>
-          </li>
-        </ul>
-      </nav>
-
-    </div>
-  </div>
-
-  <!-- ======== JAVASCRIPT ======== -->
-  <script type="text/javascript" src="libs/jquery/jquery-3.3.1.min.js"></script>
-  <script src="js/bundle.min.js"></script>
+  <p class="footer">This page is inspired by <a href="https://poeschko.com/">Jan P&ouml;schko</a></p>
 </body>
-
 </html>
